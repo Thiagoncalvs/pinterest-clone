@@ -1,0 +1,64 @@
+img{
+    width: auto;
+}
+
+.Estrutura-Geral-Grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    justify-content: center;
+}
+    .Navegacao{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        background: rgba(0, 0, 0, 0.199);
+    }
+        .LogoMarca{
+            display: flex;
+            align-items: center;
+            grid-column: 1;
+            grid-row: 1;
+        }
+            .LogoMarca a{
+
+            }
+        .BarraPesquisa{
+            display: flex;
+            align-items: center;
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .Login-Bag{
+            display: flex;
+            justify-content: space-around;
+            grid-column: 3;
+            grid-row: 1;
+        }
+        .NavegacaoExtra{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            grid-row: 2;
+            grid-column: 1 / -1;
+        }
+    .AreaConteudoProduto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+    }
+        .ProdutosDestaque{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+            align-content: flex-start;
+        }
+        .ProdutosGeral{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: baseline;
+            align-content: flex-start;
+        }
