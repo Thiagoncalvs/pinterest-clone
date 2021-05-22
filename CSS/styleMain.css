@@ -8,7 +8,8 @@
     /* outline: #2daebf dashed 1px; */
     margin: 0;
     padding: 0;
-    color: #e8eaed;
+    /* color: #e8eaed; */
+    color: rgba(0, 0, 0, 0.829);
     list-style: none;
     text-decoration: none;
 }
@@ -18,7 +19,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: minmax(auto, 80px) auto;
     justify-content: center;
-    background: #202124;
+    /* background: #202124; */
+    background: white;
 }
     .Navegacao{
         display: grid;
@@ -62,7 +64,8 @@
                 border: none;
             }
             .BarraPesquisa div{
-                background: #e8eaed50;
+                /* background: #e8eaed50; */
+                background: #e8eaed83;
                 border: none;
                 border-radius: 20px;
                 height: 60%;
@@ -79,26 +82,48 @@
             /* background: rgba(0, 128, 0, 0.39); */
         }
     .AreaConteudoProduto{
-        padding: 0;
-        padding-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: flex-start;
-        justify-content: space-around;
         grid-row: 2;
         grid-column: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
     }
+        .AreaConteudoProduto .ConteudoProduto{
+            /* background: rgba(255, 0, 0, 0.274); */
+            grid-column: span 1;
+            margin: 5px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .AreaConteudoProduto #CPGrande{
+            grid-row: span 2;
+        }
+            .AreaConteudoProduto #CPGrande img{
+                height: 470px;
+            }
+        .AreaConteudoProduto #CPMedio{
+            grid-row: span 2    ;
+        }
         .AreaConteudoProduto p{
-            margin: 10px 15px;
             font-family: "FonteLegenda", Times, serif;
             font-size: 1.1em;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 20px;
         }
         .AreaConteudoProduto img{
-            max-width: 290px;
-            margin: 10px;
+            width: 290px;
+            height: 203px;
+            /* margin: 10px; */
             margin-bottom: 0;
             border-radius: 10px;
+            align-self: center;
+        }
+        .AreaConteudoProduto #CPGrande{
+
         }
         .AreaConteudoProduto img:hover{
             opacity: 0.5;
