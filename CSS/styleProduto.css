@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "FonteLegenda";
+    src: url("../fonte/SciFly-Sans/SciFly-Sans.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    /* outline: #2daebf dashed 1px; */
+    margin: 0;
+    padding: 0;
+    /* color: #e8eaed; */
+    color: rgba(0, 0, 0, 0.829);
+    list-style: none;
+    text-decoration: none;
+}
+
+.Estrutura-Geral-Grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto, 80px) auto auto;
+    justify-content: center;
+    /* background: #202124; */
+    background: white;
+}
+    .Navegacao{
+        display: grid;
+        grid-template-columns: minmax(auto, 200px) 2fr minmax(auto, 200px);
+        grid-template-rows: auto;
+        background: rgba(207, 25, 25, 0);   
+        grid-row: 1;
+        grid-column: 1;
+        border-bottom: 1px solid #e8eaed50;
+    }
+        .LogoMarca{
+            display: flex;
+            align-items: center;
+            grid-column: 1;
+            grid-row: 1;
+            justify-content: space-around;
+            /* background: #2dbf4170; */
+        }
+            .LogoMarca a{
+                margin: 10px;
+                background: none;
+
+            }
+        .BarraPesquisa{
+            display: flex;
+            align-items: center;
+            grid-column: 2;
+            grid-row: 1;
+            /* background: rgba(255, 255, 0, 0.342); */
+        }
+            .BarraPesquisa input{
+                background: none;
+                outline: none   ;
+                border: none;
+                width: 90%;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .BarraPesquisa button{
+                color: 0;
+                background: none;
+                border: none;
+            }
+            .BarraPesquisa div{
+                /* background: #e8eaed50; */
+                background: #e8eaed83;
+                border: none;
+                border-radius: 20px;
+                height: 60%;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+        .Login-Bag{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            grid-column: 3;
+            grid-row: 1;
+            /* background: rgba(0, 128, 0, 0.39); */
+        }
+    .AreadoProduto{
+        grid-row: 2;
+        grid-column: 1;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 550px;
+
+        /* align-content: center;
+        justify-content: center;
+        align-items: center; */
+        background: red;
+    }   
+        .AreadoProduto .SlideProduto{
+            grid-row: 1;
+            grid-column: 1;
+            background: blue;
+        }
+        .AreadoProduto .InfoProduto{
+            grid-row: 1;
+            grid-column: 2;
+            background: green;
+
+        }
+    .AreaConteudoProduto{
+        grid-row: 3;
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
+    }
+        .AreaConteudoProduto .ConteudoProduto{
+            /* background: rgba(255, 0, 0, 0.274); */
+            grid-column: span 1;
+            margin: 5px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .AreaConteudoProduto #CPGrande{
+            grid-row: span 2;
+        }
+            .AreaConteudoProduto #CPGrande img{
+                height: 470px;
+            }
+        .AreaConteudoProduto #CPMedio{
+            grid-row: span 2    ;
+        }
+        .AreaConteudoProduto p{
+            font-family: "FonteLegenda", Times, serif;
+            font-size: 1.1em;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+        .AreaConteudoProduto img{
+            width: 290px;
+            height: 203px;
+            /* margin: 10px; */
+            margin-bottom: 0;
+            border-radius: 10px;
+            align-self: center;
+        }
+        .AreaConteudoProduto #CPGrande{
+
+        }
+        .AreaConteudoProduto img:hover{
+            opacity: 0.5;
+        }
