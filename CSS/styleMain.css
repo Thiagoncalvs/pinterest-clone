@@ -1,3 +1,33 @@
+@media (min-width: 2000px) {
+    .AreaConteudoProduto{
+        max-width: 98% !important;
+        column-count: 15 !important;
+    }
+}
+@media (max-width: 1000px) {
+    .AreaConteudoProduto{
+        column-count: 4 !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .AreaConteudoProduto{
+        column-count: 3 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .AreaConteudoProduto{
+        column-count: 2 !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .AreaConteudoProduto{
+        column-count: 1 !important;
+    }
+}
+
 @font-face {
     font-family: "FonteLegenda";
     src: url("../fonte/SciFly-Sans/SciFly-Sans.ttf") format('truetype');
@@ -14,22 +44,31 @@
     text-decoration: none;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
 .Estrutura-Geral-Grid{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(auto, 80px) auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     justify-content: center;
     /* background: #202124; */
-    background: white;
+    background: rgba(255, 255, 255, 0);
 }
     .Navegacao{
+        position: fixed;
         display: grid;
-        grid-template-columns: minmax(auto, 200px) 2fr minmax(auto, 200px);
-        grid-template-rows: auto;
-        background: rgba(207, 25, 25, 0);   
-        grid-row: 1;
-        grid-column: 1;
-        border-bottom: 1px solid #e8eaed50;
+        grid-template-columns: minmax(auto, 272px) 1fr minmax(auto, 193px);
+        grid-template-rows: 80px;
+        background: white;   
+        width: 100%;
+        z-index: 1;
+        /* grid-row: 1; */
+        /* grid-column: 1; */
+        /* border-bottom: 1px solid #e8eaed50; */
     }
         .LogoMarca{
             display: flex;
@@ -51,18 +90,6 @@
             grid-row: 1;
             /* background: rgba(255, 255, 0, 0.342); */
         }
-            .BarraPesquisa input{
-                background: none;
-                outline: none   ;
-                border: none;
-                width: 90%;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            .BarraPesquisa button{
-                color: 0;
-                background: none;
-                border: none;
-            }
             .BarraPesquisa div{
                 /* background: #e8eaed50; */
                 background: #e8eaed83;
@@ -71,8 +98,21 @@
                 height: 60%;
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
+                overflow: hidden;
             }
+                .BarraPesquisa input{
+                    background: none;
+                    outline: none   ;
+                    border: none;
+                    width: 94%;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                .BarraPesquisa button{
+                    color: 0;
+                    background: none;
+                    border: none;
+                    width: 6%;
+                }
         .Login-Bag{
             display: flex;
             justify-content: space-around;
@@ -82,49 +122,50 @@
             /* background: rgba(0, 128, 0, 0.39); */
         }
     .AreaConteudoProduto{
-        grid-row: 2;
-        grid-column: 1;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-content: flex-start;
-        justify-content: center;
-        align-items: flex-start;
+        max-width: 95%;
+        margin: 80.5px auto 0 auto;
+        column-count: 5;
     }
-        .AreaConteudoProduto .ConteudoProduto{
-            /* background: rgba(255, 0, 0, 0.274); */
-            grid-column: span 1;
-            margin: 5px;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .AreaConteudoProduto #CPGrande{
-            grid-row: span 2;
-        }
-            .AreaConteudoProduto #CPGrande img{
-                height: 470px;
-            }
-        .AreaConteudoProduto #CPMedio{
-            grid-row: span 2    ;
-        }
-        .AreaConteudoProduto p{
-            font-family: "FonteLegenda", Times, serif;
-            font-size: 1.1em;
-            width: 100%;
-            padding-top: 10px;
-            padding-left: 20px;
-        }
-        .AreaConteudoProduto img{
-            width: 290px;
-            height: 203px;
-            /* margin: 10px; */
-            margin-bottom: 0;
-            border-radius: 10px;
-            align-self: center;
-        }
-        .AreaConteudoProduto #CPGrande{
 
+    .AreaConteudoProduto .ConteudoProduto{
+            /* background: rgba(255, 0, 0, 0.397); */
+            margin: 0;
+            padding: 0 0 20px 0;
+            overflow: hidden;
+            /* break-inside: avoid-column; */
+            position: relative;
+            break-inside: avoid-column;
         }
-        .AreaConteudoProduto img:hover{
-            opacity: 0.5;
+        .AreaConteudoProduto .ConteudoProduto div#preco{
+            width: 80px;
+            height: 45px;
+            border-radius: 40px;
+            background: #e60023;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            opacity: 0;
         }
+            .AreaConteudoProduto .ConteudoProduto:hover div#preco{
+                opacity: 1;                
+                transition: 0.3s;
+            }
+            .AreaConteudoProduto .ConteudoProduto div#preco p{
+                font-size: 0.9em;
+                opacity: 1;
+                color: hsl(349, 100%, 84%);
+                /* font-family: 'FonteLegenda', Times, serif; */
+                /* background: blue; */
+                margin-top: 13px;
+                text-align: center;
+            }
+        .AreaConteudoProduto .ConteudoProduto img{
+            opacity: 1;
+        }
+        .AreaConteudoProduto .ConteudoProduto:hover img{
+                opacity: 0.5;
+                transition: 0.3s;
+            }
+            .AreaConteudoProduto .ConteudoProduto p{
+                margin-top: 10px;
+            }
