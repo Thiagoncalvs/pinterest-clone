@@ -69,7 +69,13 @@ img{
         /* grid-column: 1; */
         /* border-bottom: 1px solid #e8eaed50; */
     }
-        .LogoMarca{
+        .Navegacao a .LogoMarca{
+            /* background: rgba(255, 0, 0, 0.438); */
+            width: 100%;
+            height: 100%;
+
+        }
+        .Navegacao .LogoMarca{
             display: flex;
             align-items: center;
             grid-column: 1;
@@ -77,11 +83,6 @@ img{
             justify-content: space-around;
             /* background: #2dbf4170; */
         }
-            .LogoMarca a{
-                margin: 10px;
-                background: none;
-
-            }
         .BarraPesquisa{
             display: flex;
             align-items: center;
@@ -125,47 +126,121 @@ img{
         margin: 80.5px auto 0 auto;
         column-count: 5;
     }
+        .AreaConteudoProduto > *{
+            font-family: 'FonteLegenda', Times, serif;
+            font-size: 0.7em;
+        }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
         .AreaConteudoProduto a{
-            outline: #2daebf dashed 1px;
+            /* outline: #2daebf dashed 1px; */
             display: block;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
+            border-radius: 20px;
         }
             .AreaConteudoProduto a div.ConteudoProduto{
-                padding: 0 0 20px 0;
+                padding: 0;
                 overflow: hidden;
-                /* position: relative; */
                 break-inside: avoid-column;
-                /* border-radius: 20px; */
+                border-radius: 20px;
             }   
-            .AreaConteudoProduto a div.ConteudoProduto span.EfeitoEscuro{
-                background: #2daebf4f;
-                /* display: block; */
-                width: 100%;
-                height: 80%;
-                border-radius: 20px;
-                position: absolute;
-                top: 0;
-                z-index: 2;
-            }
-            .AreaConteudoProduto a div.ConteudoProduto img{
-                border-radius: 20px;
-                overflow: hidden;
-            }
-            .AreaConteudoProduto a div.ConteudoProduto h2 span#preco{
-                z-index: 3;
-                width: 80px;
-                height: 45px;
-                border-radius: 40px;
-                background: orange;
-                position: absolute;
-                color: rgb(110, 72, 0);
-                top: 5px;
-                right: 5px;
-                opacity: 0;
-            }
-                .AreaConteudoProduto a:hover div.ConteudoProduto h2 span#preco{
-                    opacity: 1;                
+                .AreaConteudoProduto a div.ConteudoProduto h2#TituloProduto{
+                    position: absolute;
+                    top: 104%;
+                    left: 10px;
+                }
+                .AreaConteudoProduto a div.ConteudoProduto span.EfeitoEscuro{
+                    box-shadow: none;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 0;
+                    z-index: 2;
+                    transition: 1s;
+                }
+                .AreaConteudoProduto a:hover div.ConteudoProduto span.EfeitoEscuro{
+                    /* background: rgba(0, 0, 0, 0.350); */
+                    box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.644);
                     transition: 0.3s;
                 }
+                .AreaConteudoProduto a div.ConteudoProduto span#preco{
+                    z-index: 3;
+                    width: 80px;
+                    height: 45px;
+                    border-radius: 40px;
+                    background: orange;
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    opacity: 0;
+                    transition: 1s;
+                }
+                    .AreaConteudoProduto a:hover div.ConteudoProduto span#preco{
+                        opacity: 1;                
+                        transition: 0.3s;
+                    }
+                    .AreaConteudoProduto a div.ConteudoProduto span#preco p{
+                        width: auto;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        display: flex;
+                        font-size: 1.3em;
+                    }
+                    .AreaConteudoProduto a div.ConteudoProduto span#preco p span{
+                        color: rgb(110, 72, 0);
+                    }
+                    .AreaConteudoProduto a div.ConteudoProduto span#preco span#FormaPagamentoPreferencial{
+                        width: 130px;
+                        height: 25px;
+                        border-radius: 40px;
+                        background: orange;
+                        position: absolute;
+                        top: 0;
+                        right: 20px;
+                        transform: translateX(-50%);
+                        transition: 1s;
+                        opacity: 0.5;
+                    }
+                        .AreaConteudoProduto a div.ConteudoProduto span#preco span#FormaPagamentoPreferencial p{
+                            width: 100%;
+                            position: absolute;
+                            left: 55%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            /* display: flex; */
+                            font-size: 1.1em;
+                            color: rgb(110, 72, 0);
+                        }
+                        .AreaConteudoProduto a div.ConteudoProduto span#preco:hover span#FormaPagamentoPreferencial{
+                            opacity: 1;                
+                            transition: 0.3s;
+                        }
+                    .AreaConteudoProduto a div.ConteudoProduto span#preco span#Frete{
+                        width: 100%;
+                        height: 25px;
+                        border-radius: 40px;
+                        background: lime;
+                        position: absolute;
+                        top: 30px;
+                        right: 95px;
+                        transform: translateX(-50%);
+                        transition: 1s;
+                        opacity: 0.5;
+                    }
+                        .AreaConteudoProduto a div.ConteudoProduto span#preco span#Frete p{
+                            width: 100%;
+                            position: absolute;
+                            left: 65%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            /* display: flex; */
+                            font-size: 1.1em;
+                            color: rgb(0, 80, 0);
+                        }
+                        .AreaConteudoProduto a div.ConteudoProduto span#preco:hover span#Frete{
+                            opacity: 1;                
+                            transition: 0.3s;
+                        }
