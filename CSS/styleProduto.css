@@ -149,7 +149,7 @@ img{
             width: 80px;
             height: 45px;
             border-radius: 40px;
-            background: #e60023;
+            background: orange;
             position: absolute;
             top: 5px;
             right: 5px;
@@ -162,7 +162,7 @@ img{
             .AreaConteudoProduto .ConteudoProduto div#preco p{
                 font-size: 0.9em;
                 opacity: 1;
-                color: hsl(349, 100%, 84%);
+                color: rgb(110, 72, 0);
                 /* font-family: 'FonteLegenda', Times, serif; */
                 /* background: blue; */
                 margin-top: 13px;
