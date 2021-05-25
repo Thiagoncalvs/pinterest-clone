@@ -17,13 +17,66 @@
 }
 
 @media (max-width: 600px) {
+    .Navegacao{
+        bottom: 0 !important;
+        grid-template-columns: 2fr 1fr !important;
+    }
+    .Navegacao a#logo, .Navegacao a#logo > *{
+        display: none !important;
+    }
+    .BarraPesquisa{
+        grid-column: 1 !important;
+    }
+    .BarraPesquisa div{
+        height: 60%;
+        width: 100%;
+    }
+        .BarraPesquisa input{
+            width: 80% !important;
+        }
+        .BarraPesquisa button{
+            width: 20% !important;
+        }
+    .Login-Bag{
+        grid-column: 2 !important;
+    }
     .AreaConteudoProduto{
+        margin: 20px auto 0 auto !important;
         column-count: 2 !important;
     }
 }
 
 @media (max-width: 400px) {
+    .Navegacao{
+        grid-template-columns: 2fr 1fr !important;
+        bottom: 0 !important;
+    }
+
+    .Navegacao a#logo, .Navegacao a#logo > *{
+        display: none !important;
+    }
+    .BarraPesquisa{
+        grid-column: 1 !important;
+    }
+    .BarraPesquisa div{
+        height: 60%;
+        width: 100%;
+    }
+        .BarraPesquisa input{
+            width: 80% !important;
+        }
+        .BarraPesquisa button{
+            width: 20% !important;
+        }
+    .Login-Bag{
+        grid-column: 2 !important;
+    }
+    .Login-Bag a#modoDiaNoite{
+        display: none !important;
+    }
+
     .AreaConteudoProduto{
+        margin: 20px auto 0 auto !important;
         column-count: 1 !important;
     }
 }
@@ -73,9 +126,6 @@ img{
             /* background: rgba(255, 0, 0, 0.438); */
             width: 100%;
             height: 100%;
-
-        }
-        .Navegacao .LogoMarca{
             display: flex;
             align-items: center;
             grid-column: 1;
